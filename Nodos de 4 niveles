@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="2000" height="1000" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Dibuja el círculo 5
+ctx.beginPath();
+ctx.arc(500, 60, 40, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.font = "30px Arial";
+ctx.fillText("5", 500, 50);
+
+// Dibuja el círculo 4
+ctx.beginPath();
+ctx.arc(40, 150, 40, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.font = "30px Arial";
+ctx.fillText("4", 40, 150);
+
+// Dibuja el círculo 8
+ctx.beginPath();
+ctx.arc(800, 150, 40, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.font = "30px Arial";
+ctx.fillText("8", 800, 150);
+
+// Dibuja el círculo 7
+ctx.beginPath();
+ctx.arc(600, 300, 40, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.font = "30px Arial";
+ctx.fillText("7", 600, 300);
+
+// Dibuja el círculo 9
+ctx.beginPath();
+ctx.arc(900, 300, 40, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.font = "30px Arial";
+ctx.fillText("9", 900, 300);
+
+// Dibuja el círculo 15
+ctx.beginPath();
+ctx.arc(1000, 450, 40, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.font = "30px Arial";
+ctx.fillText("15", 1000, 450);
+
+// Conecta los círculos en el orden especificado
+ctx.beginPath();
+ctx.moveTo(500, 60);
+ctx.lineTo(40, 150);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(500, 60);
+ctx.lineTo(800, 150);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(800, 150);
+ctx.lineTo(600, 300);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(800, 150);
+ctx.lineTo(900, 300);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(900, 300);
+ctx.lineTo(1000, 450);
+ctx.stroke();
+</script>
+
+</body>
+</html>
